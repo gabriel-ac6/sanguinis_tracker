@@ -1,0 +1,513 @@
+
+
+  <!-- ======= Header ======= -->
+  <section id="topbar" class="topbar d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contactexample.com">contactexample.com</a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </section><!-- End Top Bar -->
+
+  <header id="header" class="header d-flex align-items-center">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>Sanguinis Tracker<span>.</span></h1>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <style>
+            .button{
+              background-color: transparent;
+              border-style: solid;
+              border-radius: 4px;
+              color: white;
+              border-color: white;
+              transition: 1s;
+              height: 50px;
+            }
+            .button:hover{
+              background-color: black;
+              border-style: solid;
+              border-radius: 4px;
+              color: white;
+              border-color: black;
+              transition: 1s;
+              height: 50px;
+            }
+          </style>
+          <li><a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page"><button class="button">Login ou Cadastro</button></a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+  <!-- End Header -->
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+   
+ 
+
+  <main>
+
+
+
+
+  <br><br><br>
+  <style>
+  
+
+.containerSI{
+  position: relative;
+  max-width: 850px;
+  width: 100%;
+  background: #fff;
+  padding: 40px 30px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  perspective: 2700px;
+}
+.containerSI .cover{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 50%;
+  z-index: 98;
+  transition: all 1s ease;
+  transform-origin: left;
+  transform-style: preserve-3d;
+}
+.containerSI .cover::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #ff6a00;
+ 
+  z-index: 100;
+}
+.containerSI .cover::after{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #ff6a00;
+
+  z-index: 100;
+  transform: rotateY(180deg);
+}
+.containerSI #flip:checked ~ .cover{
+  transform: rotateY(-180deg);
+}
+.containerSI .cover img{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 12;
+  backface-visibility: hidden;
+}
+.containerSI .cover .back .backImg{
+  transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.containerSI .cover .text{
+  position: absolute;
+  z-index: 111;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cover .text .text-1,
+.cover .text .text-2{
+  font-size: 26px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  backface-visibility: hidden;
+}
+.cover .back .text .text-1,
+.cover .back .text .text-2{
+  transform: rotateY(180deg);
+}
+.cover .text .text-2{
+  font-size: 15px;
+  font-weight: 500;
+}
+.containerSI .forms{
+  height: 100%;
+  width: 100%;
+  background: #fff;
+}
+.containerSI .form-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-content .login-form,
+.form-content .signup-form{
+  width: calc(100% / 2 - 25px);
+}
+.forms .form-content .title{
+  position: relative;
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+}
+.forms .form-content .title:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 25px;
+  background: #FF9F5B;
+}
+.forms .signup-form  .title:before{
+  width: 20px;
+}
+.forms .form-content .input-boxes{
+  margin-top: 30px;
+}
+.forms .form-content .input-box{
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  margin: 10px 0;
+  position: relative;
+}
+.form-content .input-box input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0 30px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+.form-content .input-box input:focus,
+.form-content .input-box input:valid{
+  border-color: #FF9F5B;
+}
+.form-content .input-box i{
+  position: absolute;
+  color: #fb6900;
+  font-size: 17px;
+}
+.forms .form-content .text{
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+.forms .form-content .text a{
+  text-decoration: none;
+  color: #FF9F5B;
+}
+.forms .form-content .text a:hover{
+  text-decoration: underline;
+}
+.forms .form-content .button{
+  color: #fff;
+  margin-top: 40px;
+}
+.forms .form-content .button input{
+  color: #fff;
+  background: #FF9F5B;
+  border-radius: 6px;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.forms .form-content .button input:hover{
+  background: #FF9F5B;
+}
+.forms .form-content label{
+  color: #FF9F5B;
+  cursor: pointer;
+}
+.forms .form-content label:hover{
+  text-decoration: underline;
+}
+.forms .form-content .login-text,
+.forms .form-content .sign-up-text{
+  text-align: center;
+  margin-top: 25px;
+}
+.containerSI #flip{
+  display: none;
+}
+@media (max-width: 730px) {
+  .containerSI .cover{
+    display: none;
+  }
+  .form-content .login-form,
+  .form-content .signup-form{
+    width: 100%;
+  }
+  .form-content .signup-form{
+    display: none;
+  }
+  .containerSI #flip:checked ~ .forms .signup-form{
+    display: block;
+  }
+  .containerSI #flip:checked ~ .forms .login-form{
+    display: none;
+  }
+}
+  </style>
+ 
+ 
+
+  
+  
+</main>
+
+
+
+
+
+   <!-- ======= Contact Section ======= -->
+   <section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-header">
+        <h2>Sign In or Sign Up</h2>
+        <p>Use the bests IA-algorithms to help you in your exams analyzes</p>
+      </div>
+
+      <div class="row ">
+
+        <div class="col-lg-2">
+
+          
+
+        </div>
+
+        <div class="col-lg-8">
+
+        <div class="containerSI">
+          <input type="checkbox" id="flip">
+          <div class="cover">
+            <div class="front">
+              <img src="images/login.jpg" alt="Imagem Login">
+              <div class="text">
+                <span class="text-1">Cada novo amigo é uma <br> nova aventura</span>
+                <span class="text-2">Vamos nos conectar</span>
+              </div>
+            </div>
+            <div class="back">
+              <img class="backImg" src="images/register.jpg" alt="Imagem Cadastro">
+              <div class="text">
+                <span class="text-1">Compelte sua jornada <br> </span>
+                <span class="text-2">Vamos começar</span>
+              </div>
+            </div>
+          </div>
+          <div class="forms">
+              <div class="form-content">
+                <div class="login-form">
+                  <div class="title">Login</div>
+  <!-- Formulário de Login -->
+  <form (ngSubmit)="login()">
+    <div class="input-boxes">
+      <div class="input-box">
+        <i class="fas fa-envelope"></i>
+        <input type="email" placeholder="Digite seu email" [(ngModel)]="loginEmail" [ngModelOptions]="{standalone: true}" required>
+      </div>
+      <div class="input-box">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="Digite sua senha" [(ngModel)]="loginSenha" [ngModelOptions]="{standalone: true}" required>
+      </div>
+      <div class="text"><a href="#">Esqueceu a senha?</a></div>
+      <div class="button input-box">
+        <input type="submit" value="Enviar">
+      </div>
+      <div class="text sign-up-text">Não tem uma conta? <label for="flip">Inscreva-se agora</label></div>
+    </div>
+  </form>
+            </div>
+              <div class="signup-form">
+                <div class="title">Inscrever-se</div>
+  <!-- Formulário de Cadastro -->
+  <form (ngSubmit)="register()">
+    <div class="input-boxes">
+      <div class="input-box">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="Digite seu nome" required [(ngModel)]="registerNome" [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="input-box">
+        <i class="fas fa-envelope"></i>
+        <input type="text" placeholder="Digite seu email" required [(ngModel)]="registerEmail" [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="input-box">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="Digite sua senha password" required [(ngModel)]="registerSenha" [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="button input-box">
+        <input type="submit" value="Enviar">
+      </div>
+      <div class="text sign-up-text">Já tem uma conta? <label for="flip">Conecte-se agora</label></div>
+    </div>
+  </form>
+          </div>
+        </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      
+       
+      
+
+      </div>
+
+      <br><br><br>
+  </section><!-- End Contact Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span>Sanguinis Tracker</span>
+          </a>
+          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Product Management</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>
+            A108 Adam Street <br>
+            New York, NY 535022<br>
+            United States <br><br>
+            <strong>Phone:</strong> +1 5589 55488 55<br>
+            <strong>Email:</strong> infoexample.com<br>
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Sanguinis Tracker</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/impact-bootstrap-business-website-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+
+
+
+
+  
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
